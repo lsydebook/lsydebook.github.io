@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><meta name="author" content="雾切响子"><meta name="renderer" content="webkit"><meta name="copyright" content="雾切响子"><meta name="keywords" content="雾切"><meta name="description" content="侦探雾切的博客"><meta name="Cache-Control" content="no-cache"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Mr.Long's Blog</title><link rel="stylesheet" href="/css/style.css?v=2018.7.9"><link rel="stylesheet" href="/css/animation.css?v=2018.7.9"><link rel="icon" href="/img/assets/favicon.ico"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.6"><!-- scripts--><script>(function( w ){
+  "use strict";
+  // rel=preload support test
+  if( !w.loadCSS ){
+    w.loadCSS = function(){};
+  }
+  // define on the loadCSS obj
+  var rp = loadCSS.relpreload = {};
+  // rel=preload feature support test
+  // runs once and returns a function for compat purposes
+  rp.support = (function(){
+    var ret;
+    try {
+      ret = w.document.createElement( "link" ).relList.supports( "preload" );
+    } catch (e) {
+      ret = false;
+    }
+    return function(){
+      return ret;
+    };
+  })();
+
+  // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+  // then change that media back to its intended value on load
+  rp.bindMediaToggle = function( link ){
+    // remember existing media attr for ultimate state, or default to 'all'
+    var finalMedia = link.media || "all";
+
+    function enableStylesheet(){
+      link.media = finalMedia;
+    }
+
+    // bind load handlers to enable media
+    if( link.addEventListener ){
+      link.addEventListener( "load", enableStylesheet );
+    } else if( link.attachEvent ){
+      link.attachEvent( "onload", enableStylesheet );
+    }
+
+    // Set rel and non-applicable media type to start an async request
+    // note: timeout allows this to happen async to let rendering continue in IE
+    setTimeout(function(){
+      link.rel = "stylesheet";
+      link.media = "only x";
+    });
+    // also enable media after 3 seconds,
+    // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+    setTimeout( enableStylesheet, 3000 );
+  };
+
+  // loop through link elements in DOM
+  rp.poly = function(){
+    // double check this to prevent external calls from running
+    if( rp.support() ){
+      return;
+    }
+    var links = w.document.getElementsByTagName( "link" );
+    for( var i = 0; i < links.length; i++ ){
+      var link = links[ i ];
+      // qualify links to those with rel=preload and as=style attrs
+      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+        // prevent rerunning on link
+        link.setAttribute( "data-loadcss", true );
+        // bind listeners to toggle media back
+        rp.bindMediaToggle( link );
+      }
+    }
+  };
+
+  // if unsupported, run the polyfill
+  if( !rp.support() ){
+    // run once at least
+    rp.poly();
+
+    // rerun poly on an interval until onload
+    var run = w.setInterval( rp.poly, 500 );
+    if( w.addEventListener ){
+      w.addEventListener( "load", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    } else if( w.attachEvent ){
+      w.attachEvent( "onload", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    }
+  }
+
+
+  // commonjs
+  if( typeof exports !== "undefined" ){
+    exports.loadCSS = loadCSS;
+  }
+  else {
+    w.loadCSS = loadCSS;
+  }
+}( typeof global !== "undefined" ? global : this ) );</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" defer></script><script src="/js/main.js?v=2018.7.9" defer></script><!-- fancybox--><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script><!-- busuanzi--><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="雾切" type="application/atom+xml">
+</head><body><section class="profile-close" id="cxo-profile"><div class="profile-avatar"><i class="fa fa-caret-left"></i><img src="/img/assets/cat.png"></div><!--.profile-saying
+  i.fa.fa-comment
+  .saying--><div class="cxo-profile-inner"><div class="profile-name">longlongyu</div><div class="profile-signature">for me</div><div class="friends"><div>FRIENDS</div><span><a href="//github.com/Longlongyu" target="_black">friendA</a></span><span><a href="//github.com/" target="_black">friendB</a></span><span><a href="//github.com/" target="_black">friendC</a></span></div><div class="read-progress"></div></div></section><header id="cxo-intro" style="height: 70vh;background-image: url(/img/intro/index-bg.png);"><nav id="cxo-intro-nav"><section><div class="intro-nav-title"><a href="/">Mr.Long's Blog</a></div><div class="intro-nav-label-box"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div><i class="fa fa-bars intro-nav-menu"><div class="intro-nav-drop"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div></i><div class="clear"></div></section></nav><h1 class="post-title"></h1><div class="post-intros"><div class="post-intro-meta"><span class="post-intro-time"><i class="post-intro-calendar fa fa-calendar"></i><span>2022-11-30</span></span></div></div></header><article class="cxo-up" id="cxo-content-outer"><section id="cxo-content-inner"><article class="article-entry" id="post"><hr>
+<p>title:关于我想对自己说的话<br>date: 2022-11-30 00:08:46<br>tags:<br>刘晟毅-2022211305-2022211121<br>吃苦耐劳才能成大事“如要锻炼一个能做大事的人，必定要叫他吃苦受累，百不称心，才能养成坚忍的性格。一个人经过不同程度的锻炼，就获得不同程度的修养，不同程度的效益。好比香料，捣得愈碎，磨得愈细，香得愈浓烈。如要锻炼一个能做大事的人，必定要叫他吃苦受累，百不称心，才能养成坚忍的性格。一个人经过不同程度的锻炼，就获得不同程度的修养，不同程度的效益。好比香料，捣得愈碎，磨得愈细，香得愈浓烈。”——钱锺书夫人杨绛</p>
+<p>　　成功的背后都有一份不寻常的付出，世上没有不劳而获，唾手可得之事，所谓“一份耕耘，一份收获”，只有凭自己的劳动所获得的成果才是心安理得的，得之无愧。“天亦将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身”。古人亦云“吃的苦中苦，方为人上人”。诸如此类古训则告诫人们都要凭自己的努力，凭自己是才智，不要试图去寻求捷径，投机取巧未必得偿所愿。付出总有收获，劳动必有成果，自然界赋予每个人赋予的都是公平的，最后的结果则在于你的付出。　　自生命降生以来，我们便在大人的搀扶下学会了走路，在此之前不知摔了多少次，在一次次的摔倒后终于自己能站立起来了，就此学会了行走，之后还能奔跑。在学生时期我们孜孜不求的渴求着知识，参加各种体育锻炼与竞赛，积极从事各种体力劳动，就是为了强健体魄，积累知识，获取经验是为了将来成就事业打好基础，如此，才能有成功的希望。　　成功之路具有无比的艰辛，会遇到很多的挫折，那些困难也许不是你个人的力量所能解决的，需要寻求帮助，也许还需要集体的力量才能最终完成，在此，你更得需要具备自己足够的能量，以饱满的热情、充沛的精力和强健的体能带动或参与到共同的事业中去，经过坚持不懈的努力，成功才会到来。选择是一种智慧，放弃需要具备勇气，当面临困境时，必须果断作出选择，量力而行不可执迷不悟于眼前，退是为了进，积蓄力量以便能更进一步。　　成功大多是在经历多次失败后的基础上获得的，在遇到困难时，不可轻言放弃，也许就差一步之遥。失败后要寻找原因，总结经验，接受教训，在下一次的奋斗中逐渐改进，以免重蹈覆辙。经历是人生的财富，坚持于自己该坚持是，放弃于自己该放弃的，不可因事怨人，得从自己身上寻找原因，调整方向，只有敢于开拓，勇于刻苦之人，最终才有获得成功的希望。　　我们的每一天都是新的开始，在第一缕阳光照进你窗户的时候，意味着你要准备一天的工作了。调整好自己的心态，踏实地走好脚下的每一步路，目光永远向着前方，坚定心中的信念，不要心猿意马的分散自己的思绪，以专一的目光做好自己的工作，是必定能够到达成功的彼岸。须知，只有亲身经历的才能转化为自己的财富，古往今来凡成大事者都有一番常人难以想象的经历，甚至是九死一生之后所能达到事业的顶峰，直到此时那些曾经受过的苦难已经不值一提，早已如云烟般化去。　　在年轻时多因志高才疏，理想过于远大而往往不切于实际，空有一份激情，却少付诸于行动。随着岁月的成长，人的心智会得以成熟，懂得自己的特长，修正奋斗的方向和目标，明白非自己努力所得的成果终非圆满。若想成就一番事业，必先立志，确定奋斗的目标，明确的计划，权衡自己，凭现有的资源是否能够实行，不能有太多的依赖。在此之前须掌握必备的文化知识，相应的工作技能，量力而行，正确认识自己的不足，以自己的智慧排除障碍，避开挫折，也许会向成功靠近。　　具有吃苦耐劳i的精神是一种积极的态度，还需顺应自然规律，保持坦然之心态，得失成败都有其一定条件的因素存在的，做到成而不骄，败而不馁，在奋斗的过程中体味人生的快乐，不执迷与事物的外相，注重自身的修为，成功的人生并不仅仅在于事业上的，给自己一份逍遥与解脱何尝不是一种美好的生活。至此，那份曾经的苦难又何足道哉。</p>
+</article><!-- lincense--><div class="license-wrapper"><p> <span>Author:  </span><a href="http://lsydebook.github.io.com">雾切响子</a></p><p> <span>Link:  </span><a href="http://lsydebook.github.io.com/2022/11/30/undefined/">http://lsydebook.github.io.com/2022/11/30/undefined/</a></p><p> <span>Copyright:  </span><span>All articles in this blog are licensed under <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/3.0">CC BY-NC-SA 3.0</a> unless stating additionally.</span></p></div><div class="post-paginator"><a class="nextSlogan" href="/2022/11/29/undefined/" title=""><span>NextPost ></span><br><span class="nextTitle">[Untitled Post]</span></a><div class="clear"></div></div><div id="comment"></div></section></article><footer id="cxo-footer-outer"><div id="cxo-footer-inner"><p class="footer-container"><span>Site by </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span> | theme </span><a target="_blank" rel="noopener" href="https://github.com/Longlongyu/hexo-theme-Cxo"><span>Cxo</span></a></p><i class="fa fa-user"> </i><span id="busuanzi_value_site_uv"></span><span> | </span><i class="fa fa-eye"> </i><span id="busuanzi_value_site_pv"></span></div></footer><!-- catelog--><div class="toc-wrapper" style="top: 70vh;"><div class="toc-catalog"><i class="fa fa-list"> </i><span>CATALOG</span></div></div><!-- top--><i class="fa fa-arrow-up close" id="go-up" aria-hidden="true"></i></body></html>
