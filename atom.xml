@@ -6,7 +6,7 @@
   <link href="http://lsydebook.github.io.com/atom.xml" rel="self"/>
   
   <link href="http://lsydebook.github.io.com/"/>
-  <updated>2023-02-18T10:54:29.811Z</updated>
+  <updated>2023-02-24T13:25:18.036Z</updated>
   <id>http://lsydebook.github.io.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一周</title>
+    <link href="http://lsydebook.github.io.com/2023/02/24/undefined/"/>
+    <id>http://lsydebook.github.io.com/2023/02/24/undefined/</id>
+    <published>2023-02-24T13:22:55.000Z</published>
+    <updated>2023-02-24T13:25:18.036Z</updated>
+    
+    <content type="html"><![CDATA[<p>周五了，试着做一下扫雷，发现C++必须要学到类（class）才可以去做，不然做出来的跟C语言一模一样，没有任何意义<br>这一次是看懂了函数在栈区中的存储变化<br>大一果然在0基础的情况下会有很多迷茫</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;周五了，试着做一下扫雷，发现C++必须要学到类（class）才可以去做，不然做出来的跟C语言一模一样，没有任何意义&lt;br&gt;这一次是看懂了函数在栈区中的存储变化&lt;br&gt;大一果然在0基础的情况下会有很多迷茫&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
