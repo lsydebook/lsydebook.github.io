@@ -6,7 +6,7 @@
   <link href="http://lsydebook.github.io.com/atom.xml" rel="self"/>
   
   <link href="http://lsydebook.github.io.com/"/>
-  <updated>2023-02-24T13:25:18.036Z</updated>
+  <updated>2023-07-15T11:42:45.523Z</updated>
   <id>http://lsydebook.github.io.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://lsydebook.github.io.com/2023/07/15/undefined/"/>
+    <id>http://lsydebook.github.io.com/2023/07/15/undefined/</id>
+    <published>2023-07-15T11:41:19.679Z</published>
+    <updated>2023-07-15T11:42:45.523Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: return<br>date: 2023-07-15 19:41:19<br>tags:<br>第二次回去<br>准备开始OpenCV视觉学习<br>以及数学竞赛准备预选</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;title: return&lt;br&gt;date: 2023-07-15 19:41:19&lt;br&gt;tags:&lt;br&gt;第二次回去&lt;br&gt;准备开始OpenCV视觉学习&lt;br&gt;以及数学竞赛准备预选&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>第一周</title>
